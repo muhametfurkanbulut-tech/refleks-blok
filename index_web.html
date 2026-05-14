@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refleks Blok - Sınırlarını Zorla!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #5b5ef0;
+            --secondary: #3ec96e;
+            --bg: #080b1e;
+            --card-bg: rgba(255, 255, 255, 0.05);
+            --text: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: var(--bg); 
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        header {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: radial-gradient(circle at top right, rgba(91, 94, 240, 0.15), transparent),
+                        radial-gradient(circle at bottom left, rgba(224, 72, 88, 0.15), transparent);
+            padding: 20px;
+        }
+
+        .logo-box {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, var(--primary), #4345d9);
+            border-radius: 24px;
+            margin-bottom: 24px;
+            box-shadow: 0 10px 30px rgba(91, 94, 240, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            animation: float 3s infinite ease-in-out;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(3rem, 10vw, 5rem);
+            font-weight: 900;
+            letter-spacing: -2px;
+            margin-bottom: 10px;
+        }
+
+        h1 span { color: var(--primary); }
+
+        .tagline {
+            font-size: 1.2rem;
+            color: rgba(255,255,255,0.6);
+            margin-bottom: 40px;
+            max-width: 600px;
+        }
+
+        .cta-btn {
+            padding: 18px 40px;
+            background: linear-gradient(135deg, var(--primary), #4345d9);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 800;
+            font-size: 1.1rem;
+            box-shadow: 0 5px 20px rgba(91, 94, 240, 0.5);
+            transition: all 0.3s;
+        }
+
+        .cta-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 30px rgba(91, 94, 240, 0.7);
+        }
+
+        section {
+            padding: 100px 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 40px;
+            border-radius: 24px;
+            transition: 0.3s;
+        }
+
+        .feature-card:hover {
+            background: rgba(255,255,255,0.08);
+            border-color: var(--primary);
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+
+        footer {
+            padding: 60px 20px;
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.4);
+        }
+
+        footer a {
+            color: var(--primary);
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        footer a:hover { text-decoration: underline; }
+
+        .preview-img {
+            width: 100%;
+            max-width: 800px;
+            height: 400px;
+            background: rgba(255,255,255,0.02);
+            border-radius: 30px;
+            margin: 60px auto;
+            border: 1px solid rgba(255,255,255,0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255,255,255,0.1);
+            font-size: 2rem;
+            font-weight: 900;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-box">⬜</div>
+        <h1>Refleks <span>Blok</span></h1>
+        <p class="tagline">Hızını test et, renkleri takip et ve en yüksek skora ulaş. Bağımlılık yapan, minimalist ve dinamik bir arcade deneyimi.</p>
+        <a href="#" class="cta-btn">Google Play'den İndir</a>
+    </header>
+
+    <section>
+        <div class="features">
+            <div class="feature-card">
+                <h3>Dinamik Oynanış</h3>
+                <p>Hızla değişen renkler ve artan zorluk seviyesiyle reflekslerini en uç noktaya taşı.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Minimalist Tasarım</h3>
+                <p>Göz yormayan, modern ve şık arayüzü ile sadece oyuna odaklan.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Her Cihaza Uygun</h3>
+                <p>Tabletlerde ve telefonlarda kusursuz çalışan akışkan (fluid) tasarım.</p>
+            </div>
+        </div>
+
+        <div class="preview-img">
+            OYUN İÇİ GÖRÜNÜM
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Refleks Blok - Muhammet Furkan BULUT</p>
+        <div style="margin-top: 20px;">
+            <a href="privacy.html">Gizlilik Politikası</a>
+            <a href="mailto:[Senin E-posta Adresin]">Destek</a>
+        </div>
+    </footer>
+
+</body>
+</html>
